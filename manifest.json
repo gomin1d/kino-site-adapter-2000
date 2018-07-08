@@ -1,0 +1,40 @@
+{
+  "icons": {
+    "128": "images/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "Kino Site Adapter 2000",
+  "version": "1.1",
+  "default_locale": "ru",
+  "description": "Подгоняет сайт под просмотр фильма.",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png"
+    },
+    "default_title": "Kino Site Adapter 2000",
+    "default_popup": "popup.html"
+  }
+}
