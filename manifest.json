@@ -16,18 +16,6 @@
       "background.js"
     ]
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "content.js"
-      ],
-      "run_at": "document_end",
-      "all_frames": true
-    }
-  ],
   "browser_action": {
     "default_icon": {
       "16": "images/icon16.png",
